@@ -3,14 +3,23 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "HelloWorldServlet", value = "/hello")
+@WebServlet("/hello")
 public class HelloWorldServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("Kenneth");
-        System.out.println(name);
+        String name = request.getParameter("name");
+        //the string para "name" can be anything
 
-        response.getWriter().println("Hello, " + name);
+        if (name == null) {
+            response.getWriter().println("Hello World!");
+        } else {
+            response.getWriter().println("Hello, " + name);
+        }
+
+//        response.getWriter().println("Hello, " + name);
+
+
+
 
     }
 
