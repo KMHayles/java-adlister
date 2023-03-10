@@ -13,14 +13,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 
-    Product p1 = new Product("Skateboard", 65.99);
-    Product p2 = new Product("Rollerblade", 99.99);
-    Product p3 = new Product("Road bicycle", 899.00);
+    Product p1 = new Product("Skateboard", 149.99);
+    Product p2 = new Product("Rollerblade", 199.99);
+    Product p3 = new Product("Road bicycle", 900.00);
+    Product p4 = new Product("BMX bicycle", 399.99);
+    Product p5 = new Product("Ice Skates", 129.99);
 
     List<Product> products = new ArrayList<>(Arrays.asList(
-            p1,
-            p2,
-            p3
+            p1, p2, p3, p4, p5
     ));
 
     request.setAttribute("products", products);

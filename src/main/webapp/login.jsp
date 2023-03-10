@@ -28,6 +28,8 @@
 <body>
 <h1>Login Form</h1>
 
+<%@ include file="/partials/navbar.jsp" %>
+
 <form method="POST" action="/login.jsp">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username">
@@ -37,6 +39,7 @@
     <button>Login</button>
 </form>
 
+<%@ include file="/partials/footer.jsp" %>
 
 </body>
 </html>
