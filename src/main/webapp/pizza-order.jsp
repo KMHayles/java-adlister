@@ -13,22 +13,22 @@
 <body>
 <div class="container">
     <h1>Order Your PIE!</h1>
-    <form>
+    <form method="POST">
         <label for="crust-select">Select your crust:</label>
-            <select name="crust" id="crust-select">
+            <select name="crust-select" id="crust-select">
                 <option value="regular">Regular</option>
                 <option value="buttered">Buttered</option>
                 <option value="garlic">Garlic</option>
                 <option value="stuffed">Stuffed</option>
             </select>
         <label for="sauce-select">Select your sauce:</label>
-            <select name="sauce" id="sauce-select">
+            <select name="sauce-select" id="sauce-select">
                 <option value="marinara">Marinara</option>
                 <option value="alfredo">Alfredo</option>
                 <option value="none">None</option>
             </select>
         <label for="size-select">Select your size:</label>
-            <select name="size" id="size-select">
+            <select name="size-select" id="size-select">
                 <option value="sm">Small</option>
                 <option value="md">Medium</option>
                 <option value="lg">Large</option>
