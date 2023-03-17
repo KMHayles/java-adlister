@@ -47,11 +47,29 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public Long insert(Ad ad) {
-        return null;
+        Long lastInsertedID = 0L;
+        try {
+            Statement statement = connection.createStatement();
+            String insertQuarty = String.format("INSERT INTO ads (user_id, title, description) VALUE (%d, '%s','%s')",
+                ad.getUserId(), ad.getTitle(), ad.getDescription());
+            statement.executeUpdate(insertQuarty, Statement.RETURN_GENERATED_KEYS);
+            ResultSet resultSet = statement.getGeneratedKeys();
+            resultSet.next();
+            lastInsertedID = resultSet.getLong(1);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return lastInsertedID;
     }
 
-    public static void main(String[] args) {
-        MySQLAdsDao mySQLAdsDao = new MySQLAdsDao((new Config()));
-        System.out.println(mySQLAdsDao.all());
-    }
+//    public static void main(String[] args) {
+//        MySQLAdsDao mySQLAdsDao = new MySQLAdsDao((new Config()));
+//        Ad adToInsert = new Ad (
+//                1,
+//                "Test Insert Ad",
+//                "Test Insert Ad Description"
+//        );
+//        System.out.println(mySQLAdsDao.insert(adToInsert));
+//    }
 }

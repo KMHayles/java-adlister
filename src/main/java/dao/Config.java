@@ -5,9 +5,9 @@ class Config {
         return "jdbc:mysql://localhost:3306/adlister_db?allowPublicKeyRetrieval=true&useSSL=false";
     }
     public String getUser() {
-        return "bob123";
+        return "root";
     }
     public String getPassword() {
-        return "password";
+        return "codeup";
     }
 }
