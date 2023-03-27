@@ -15,9 +15,9 @@
         <div class="row">
             <footer>
                 <ul>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Github</a></li>
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.github.com">Github</a></li>
                 </ul>
             </footer>
         </div>
